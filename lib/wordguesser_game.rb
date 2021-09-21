@@ -6,6 +6,18 @@ class WordGuesserGame
   attr_accessor :guesses
   attr_accessor :wrong_guesses
 
+  def guess letter
+
+    if word.downcase.include? letter and !guesses.include? letter.downcase
+      guesses.concat(letter.downcase)
+    elsif !wrong_guesses.include? letter.downcase
+      wrong_guesses.concat(letter.downcase)
+    end
+
+    letter.match?(/[a-z]/)
+  end
+
+
 
   # Get a word from remote "random word" service
 
