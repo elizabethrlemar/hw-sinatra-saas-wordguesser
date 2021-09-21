@@ -36,7 +36,21 @@ class WordGuesserGame
   end
 
   def check_win_or_lose
+    win_check = 0
 
+    word.split('').each do |word_letter|
+      if guesses.include? word_letter
+        win_check += 1
+      end
+    end
+
+    if win_check == word.length
+      outcome = :win
+    elsif wrong_guesses.length >= 7
+      outcome = :lose
+    else
+      outcome = :play
+    end
   end
 
 
