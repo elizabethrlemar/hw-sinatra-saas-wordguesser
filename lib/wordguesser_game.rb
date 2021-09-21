@@ -7,10 +7,9 @@ class WordGuesserGame
   attr_accessor :wrong_guesses
 
   def guess(letter)
-
     all_guesses = guesses + wrong_guesses
 
-    if letter.nil? or !letter.match?(/[a-z]/i) or
+    if letter.nil? or !letter.match?(/[a-z]/i)
       raise ArgumentError.new()
     elsif word.downcase.include? letter.downcase and !guesses.include? letter.downcase
       guesses.concat(letter.downcase)
@@ -19,9 +18,26 @@ class WordGuesserGame
     end
 
     !all_guesses.include? letter.downcase
-
   end
 
+  def word_with_guesses
+    hangman = "-" * word.length
+
+    word.split('').each { |word_letter|
+      guesses.split('').each { |guess_letter|
+        if word_letter == guess_letter
+          hangman[word.index(guess_letter)]= guess_letter
+          word[word.index(guess_letter)]= "-"
+        end
+      }
+    }
+
+    return hangman
+  end
+
+  def check_win_or_lose
+
+  end
 
 
   # Get a word from remote "random word" service
