@@ -10,13 +10,15 @@ class WordGuesserGame
 
     all_guesses = guesses + wrong_guesses
 
-    if word.downcase.include? letter.downcase and !guesses.include? letter.downcase
+    if letter.nil? or !letter.match?(/[a-z]/i) or
+      raise ArgumentError.new()
+    elsif word.downcase.include? letter.downcase and !guesses.include? letter.downcase
       guesses.concat(letter.downcase)
     elsif !wrong_guesses.include? letter.downcase
      wrong_guesses.concat(letter.downcase)
     end
 
-    !all_guesses.include? letter
+    !all_guesses.include? letter.downcase
 
   end
 
