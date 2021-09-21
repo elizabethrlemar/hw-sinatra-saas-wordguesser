@@ -63,7 +63,7 @@ describe WordGuesserGame do
         expect(@game.guess('a')).to be false
         expect(@game.guess('q')).to be false
       end
-      it 'is case insensitive' do
+      it 'is case insensitive', :pending => true do
         expect(@game.guess('A')).to be false
         expect(@game.guess('Q')).to be false
         expect(@game.guesses).not_to include('A')

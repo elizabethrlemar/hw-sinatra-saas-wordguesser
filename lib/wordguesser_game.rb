@@ -6,15 +6,18 @@ class WordGuesserGame
   attr_accessor :guesses
   attr_accessor :wrong_guesses
 
-  def guess letter
+  def guess(letter)
 
-    if word.downcase.include? letter and !guesses.include? letter.downcase
+    all_guesses = guesses + wrong_guesses
+
+    if word.downcase.include? letter.downcase and !guesses.include? letter.downcase
       guesses.concat(letter.downcase)
     elsif !wrong_guesses.include? letter.downcase
-      wrong_guesses.concat(letter.downcase)
+     wrong_guesses.concat(letter.downcase)
     end
 
-    letter.match?(/[a-z]/)
+    !all_guesses.include? letter
+
   end
 
 
@@ -25,7 +28,7 @@ class WordGuesserGame
   # end
   
   def initialize(word)
-    @word = word
+    @word = word.downcase
     @guesses = ""
     @wrong_guesses = ""
   end
