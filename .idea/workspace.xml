@@ -8,7 +8,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/part_3_connecting_Wordguesser_to_sinatra.md" beforeDir="false" afterPath="$PROJECT_DIR$/docs/part_3_connecting_Wordguesser_to_sinatra.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/wordguesser_game.rb" beforeDir="false" afterPath="$PROJECT_DIR$/lib/wordguesser_game.rb" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/spec/wordguesser_game_spec.rb" beforeDir="false" afterPath="$PROJECT_DIR$/spec/wordguesser_game_spec.rb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,7 +45,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1632170411463</updated>
-      <workItem from="1632170416822" duration="19412000" />
+      <workItem from="1632170416822" duration="20275000" />
     </task>
     <servers />
   </component>

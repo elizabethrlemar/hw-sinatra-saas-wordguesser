@@ -53,12 +53,6 @@ class WordGuesserGame
     end
   end
 
-
-  # Get a word from remote "random word" service
-
-  # def initialize()
-  # end
-  
   def initialize(word)
     @word = word.downcase
     @guesses = ""
